@@ -1,8 +1,10 @@
-package com.example.service;
+package com.example.thread;
 
 import com.example.domain.Product;
 import com.example.domain.ProductInfo;
 import com.example.domain.Review;
+import com.example.service.ProductInfoService;
+import com.example.service.ReviewService;
 
 import static com.example.util.CommonUtil.stopWatch;
 import static com.example.util.LoggerUtil.log;
