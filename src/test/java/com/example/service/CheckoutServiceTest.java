@@ -20,7 +20,7 @@ class CheckoutServiceTest {
     @Test
     void parallelism() {
         // parallelism =  no of cores -1
-        System.out.println("parallelism : " +ForkJoinPool.getCommonPoolParallelism());
+        System.out.println("parallelism : " + ForkJoinPool.getCommonPoolParallelism());
     }
 
     @Test
@@ -46,7 +46,7 @@ class CheckoutServiceTest {
     void checkout_12_items() {
 
         //given
-        //-Djava.util.concurrent.ForkJoinPool.common.parallelism=100
+        //-D java.util.concurrent.ForkJoinPool.common.parallelism=100
         //  System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "100");
 
         Cart cart = DataSet.createCart(12);

@@ -2,7 +2,6 @@ package com.example.util;
 
 import org.apache.commons.lang3.time.StopWatch;
 
-
 import static com.example.util.LoggerUtil.log;
 import static java.lang.Thread.sleep;
 
@@ -25,6 +24,7 @@ public class CommonUtil {
     }
 
     public static void startTimer(){
+        stopWatchReset();
         stopWatch.start();
     }
 
