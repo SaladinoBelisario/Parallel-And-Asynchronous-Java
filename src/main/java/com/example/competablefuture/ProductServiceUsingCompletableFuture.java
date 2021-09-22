@@ -108,7 +108,7 @@ public class ProductServiceUsingCompletableFuture {
 
     private List<ProductOption> updateInventoryToProductOption(ProductInfo productInfo) {
 
-        List<ProductOption> productOptionList = productInfo.getProductOptions()
+        return productInfo.getProductOptions()
                 .stream()
                 .map(productOption -> {
                     Inventory inventory = inventoryService.retrieveInventory(productOption);
@@ -116,8 +116,6 @@ public class ProductServiceUsingCompletableFuture {
                     return productOption;
                 })
                 .collect(Collectors.toList());
-
-        return productOptionList;
     }
 
     private List<ProductOption> updateInventoryToProductOption_approach2(ProductInfo productInfo) {
