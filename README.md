@@ -1,5 +1,34 @@
 # `Java Multithreading: Parallelism and Asynchronous programming`
 
+# Table of contents
+
+- [**Evolution of Concurrency and Parallelism APIs in Java**](#evolution-of-concurrency-and-parallelism-apis-in-java)
+- [**Concurrency vs Parallelism**](#concurrency-vs-parallelism)
+  - [Concurrency](#concurrency)
+  - [Parallelism](#parallelism)
+- [**Threads, Future, ForkJoin, Executor and its limitations**](#threads-future-forkjoin-executor-and-its-limitations)
+  - [Threads](#threads)
+  - [Thread pool](#thread-pool)
+  - [ExecutorService](#executorservice)
+  - [ForkJoin Framework](#forkjoin-framework)
+- [**Streams API & Parallel Streams**](#streams-api--parallel-streams)
+  - [Streams API](#streams-api)
+  - [ParallelStreams](#parallelstreams)
+  - [Collect Vs Reduce](#collect-vs-reduce)
+  - [Poor performance in parallel streams](#poor-performance-in-parallel-streams)
+  - [Common ForkJoin Pool](#common-forkjoin-pool)
+  - [Modifying  Default parallelism  in  Parallel Streams](#modifying--default-parallelism--in--parallel-streams)
+- [**CompletableFuture**](#completablefuture)
+  - [Reactive programming](#reactive-programming)
+  - [Completable future important methods](#completable-future-important-methods)
+  - [Combining independent Async Tasks](#combining-independent-async-tasks)
+  - [thenApply() vs thenCompose():](#thenapply-vs-thencompose)
+  - [Exception Handling In CompletableFuture](#exception-handling-in-completablefuture)
+  - [CompletableFuture Default ThreadPool](#completablefuture-default-threadpool)
+  - [Threads in CompletableFuture](#threads-in-completablefuture)
+  - [Other useful methods](#other-useful-methods)
+  - [Timeouts](#timeouts)
+
 ## **Evolution of Concurrency and Parallelism APIs in Java**
 
 ![API Evolution in Java for Concurrency and Parallelism](img/API%20evolution.PNG "API evolution")
@@ -474,4 +503,29 @@ have blocking operations in your _CompletableFuture_ pipeline**.
   - _thenCombineAsync()_
   - _thenApplyAsync()_
   - _thenComposeAsync()_
+  
+### Other useful methods
 
+**allOf()**
+
+Dealing with Multiple CompletableFutures
+
+* Static method that’s part of CompletableFuture API
+* Use _allOf()_ when you are dealing with **Multiple CompletableFuture**
+
+![allOf example](img/allOf.PNG "allOf example")
+
+**anyOf()**
+
+Dealing with Multiple CompletableFutures
+
+* Static method that’s part of CompletableFuture API
+* Use _anyOf()_ when you are dealing with retrieving **data from multiple Data Sources**
+
+![anyOf example](img/anyOf.PNG "anyOf example")
+
+### Timeouts
+
+* Asynchronous tasks may run indefinitely
+* Used to time out a task in CompletableFuture
+* _orTimeout()_ in CompletableFutureAPI
