@@ -28,6 +28,7 @@
   - [Threads in CompletableFuture](#threads-in-completablefuture)
   - [Other useful methods](#other-useful-methods)
   - [Timeouts](#timeouts)
+- [**References/Bibliography**](#referencesbibliography)
 
 ## **Evolution of Concurrency and Parallelism APIs in Java**
 
@@ -529,3 +530,10 @@ Dealing with Multiple CompletableFutures
 * Asynchronous tasks may run indefinitely
 * Used to time out a task in CompletableFuture
 * _orTimeout()_ in CompletableFutureAPI
+  
+## **References/Bibliography**
+  
+> [1]
+> «Multithreading,Parallel & Asynchronous Coding in Modern Java», Udemy. [Online]. Disponible
+> en: https://www.udemy.com/course/parallel-and-asynchronous-programming-in-modern-java/. 
+> [Accedido: 26-sep-2021]
